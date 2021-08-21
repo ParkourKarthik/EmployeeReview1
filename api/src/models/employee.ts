@@ -77,7 +77,7 @@ export class Employee {
     };
 
     employeeSchema.statics.findByCredentials = async (username, password) => {
-      const user = await DB.Models.Employee.findOne({ username });
+      const user = await DB.Models.Employee.findOne({ username }).exec();
       if (!user) throw new Error("{ error: 'Invalid login credentials' }");
       const isPasswordMatch = await cpto.validatePassword(
         password,

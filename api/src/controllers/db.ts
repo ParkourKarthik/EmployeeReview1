@@ -1,6 +1,6 @@
-import { connect, connection, Connection, Types } from 'mongoose';
-import { IEmployeeModel, Employee } from '../models/employee';
 import { MongoMemoryServer } from 'mongodb-memory-server';
+import { connect, connection, Connection } from 'mongoose';
+import { Employee, IEmployeeModel } from '../models/employee';
 
 declare interface IModels {
   Employee: IEmployeeModel;

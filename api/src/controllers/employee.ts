@@ -1,8 +1,5 @@
 import { Request, Response } from 'express';
 import DB from './db';
-import { IEmployee } from '../models/employee';
-import { Types } from 'mongoose';
-import { useReducer } from 'react';
 
 export class EmployeeController {
   public Add(req: Request, res: Response) {
